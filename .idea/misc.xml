@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_favorite.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_favorite_bottom_nav.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_home.xml" value="0.1265625" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_language.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_location_city.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_search.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_search_off.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_search_reset.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_settings.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/drawable/ic_unfavorite.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/activity_main.xml" value="0.17832957110609482" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/activity_splashscreen.xml" value="0.16" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/detail_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/favorite_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/follow_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/home_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/include_empty.xml" value="0.5" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/item_user_list.xml" value="0.1" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/list_music_item.xml" value="0.25" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/list_top_music.xml" value="0.1094224924012158" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/layout/music_item_list.xml" value="0.1094224924012158" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/app/src/main/res/menu/bottom_nav_menu.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/core/src/main/res/drawable/ic_user.xml" value="0.1265625" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/core/src/main/res/layout/favorite_fragment.xml" value="0.7943548387096774" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/core/src/main/res/layout/item_user_list.xml" value="0.67" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/core/src/main/res/layout/layout.xml" value="0.1094224924012158" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/core/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1265625" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/core/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1265625" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/favorite/src/main/res/layout/favorite_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/Permana/Documents/Dicoding/Capstone_MADE/favorite/src/main/res/layout/layout.xml" value="0.1094224924012158" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

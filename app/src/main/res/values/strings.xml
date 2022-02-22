@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Capstone_MADE</string>
+
+    <string name="public_repos">Repositories</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="exp_name">Name</string>
+    <string name="exp_location">Location</string>
+    <string name="exp_type">Type</string>
+    <string name="exp_publicRepos">0</string>
+    <string name="exp_followers">1</string>
+    <string name="exp_following">2</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="search_hint">Input Github Username ..</string>
+    <string name="not_found">User Not Found</string>
+    <string name="not_have">%1$s not have %2$s</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorite_add">%s Was Add To Favorite</string>
+    <string name="favorite_remove">%s Was Remove From Favorite</string>
+    <string name="location_not_found">Location Not Found</string>
+</resources>
