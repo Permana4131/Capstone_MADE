@@ -9,11 +9,12 @@ import com.task.capstone_made.databinding.ActivitySplashscreenBinding
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySplashscreenBinding
+    private var _binding: ActivitySplashscreenBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySplashscreenBinding.inflate(layoutInflater)
+        _binding = ActivitySplashscreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.hide()
@@ -23,7 +24,12 @@ class SplashActivity : AppCompatActivity() {
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 3000L)
+    }
+
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
     }
 
 }

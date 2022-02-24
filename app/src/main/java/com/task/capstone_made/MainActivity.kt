@@ -12,23 +12,23 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.task.capstone_made.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var mainBinding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mainBinding.root)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         navController = findNavController(R.id.nav_host)
-        NavigationUI.setupWithNavController(mainBinding.bottomNavView, navController)
+        NavigationUI.setupWithNavController(binding.bottomNavView, navController)
 
         appBarConfiguration = AppBarConfiguration(navController.graph)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id) {
-                R.id.detail_destination -> mainBinding.bottomNavView.visibility = View.GONE
-                else -> mainBinding.bottomNavView.visibility = View.VISIBLE
+                R.id.detail_destination -> binding.bottomNavView.visibility = View.GONE
+                else -> binding.bottomNavView.visibility = View.VISIBLE
             }
         }
         setupActionBarWithNavController(navController, appBarConfiguration)

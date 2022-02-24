@@ -17,7 +17,8 @@ import com.task.core.domain.model.User
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class DetailFragment : Fragment() {
-    private lateinit var binding: DetailFragmentBinding
+    private var _binding: DetailFragmentBinding? = null
+    private val binding get() = _binding!!
     private lateinit var pagerAdapter: PagerAdapter
     private lateinit var user: User
     private var isFavorite = false
@@ -29,7 +30,7 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         (activity as AppCompatActivity).supportActionBar?.title = args.username
-        binding = DetailFragmentBinding.inflate(layoutInflater, container, false)
+        _binding = DetailFragmentBinding.inflate(layoutInflater, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         observeDetail()
         return binding.root
@@ -121,5 +122,10 @@ class DetailFragment : Fragment() {
 
         override fun createFragment(position: Int): Fragment =
             FollowFragment.newInstance(username, tabList[position])
+    }
+
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
     }
 }

@@ -19,11 +19,17 @@ android {
         buildConfigField('String', 'BASE_URL', '"https://api.github.com"')
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -62,4 +68,8 @@ dependencies {
     //Coroutine Flow
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+
+    //Security Database
+    implementation "net.zetetic:android-database-sqlcipher:$sqlcipher_version"
+    implementation "androidx.sqlite:sqlite-ktx:$sqlite_version"
 }

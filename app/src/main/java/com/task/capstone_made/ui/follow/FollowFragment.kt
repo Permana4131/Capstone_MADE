@@ -17,7 +17,8 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class FollowFragment : Fragment() {
 
-    private lateinit var binding: FollowFragmentBinding
+    private var _binding: FollowFragmentBinding? = null
+    private val binding get() = _binding!!
     private lateinit var followAdapter: UserAdapter
     private lateinit var username: String
     private var type: String? = null
@@ -35,7 +36,7 @@ class FollowFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FollowFragmentBinding.inflate(layoutInflater, container, false)
+        _binding = FollowFragmentBinding.inflate(layoutInflater, container, false)
         binding.progress.visibility = View.GONE
         return binding.root
     }
@@ -135,5 +136,11 @@ class FollowFragment : Fragment() {
 
         private const val USERNAME = "username"
         private const val TYPE = "type"
+    }
+
+    override fun onDestroyView() {
+        binding.recylerFollow.adapter = null
+        _binding = null
+        super.onDestroyView()
     }
 }

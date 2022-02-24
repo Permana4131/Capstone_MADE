@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,27 +13,15 @@ import com.task.capstone_made.R
 import com.task.capstone_made.databinding.FavoriteFragmentBinding
 import com.task.core.ui.UserAdapter
 import com.task.favorite.di.favoriteModule
-import org.koin.android.ext.android.getKoin
-import org.koin.android.viewmodel.ViewModelParameter
-import org.koin.android.viewmodel.koin.getViewModel
+import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
-import org.koin.core.parameter.ParametersDefinition
-import org.koin.core.qualifier.Qualifier
 
 class FavoriteFragment : Fragment() {
 
-    private inline fun<reified VM: ViewModel> Fragment.sharedGraphViewModel (
-        @IdRes navGraphId: Int,
-        qualifier: Qualifier? = null,
-        noinline parameters: ParametersDefinition? = null
-    ) = lazy {
-        val store = findNavController().getViewModelStoreOwner(navGraphId).viewModelStore
-        getKoin().getViewModel(ViewModelParameter(VM::class, qualifier, parameters, store))
-    }
-
-    private lateinit var binding: FavoriteFragmentBinding
+    private var _binding: FavoriteFragmentBinding? = null
+    private val binding get() = _binding!!
     private lateinit var favoriteAdapter: UserAdapter
-    private val favoriteViewModel: FavoriteViewModel by sharedGraphViewModel(R.id.user_navigation)
+    private val favoriteViewModel: FavoriteViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +29,7 @@ class FavoriteFragment : Fragment() {
     ): View {
         val actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.title = getString(R.string.favorite)
-        binding = FavoriteFragmentBinding.inflate(layoutInflater, container, false)
+        _binding = FavoriteFragmentBinding.inflate(layoutInflater, container, false)
         loadKoinModules(favoriteModule)
         binding.progress.visibility = View.GONE
         return binding.root
@@ -106,5 +92,11 @@ class FavoriteFragment : Fragment() {
             binding.progress.visibility = View.GONE
             recyclerFav.visibility = View.GONE
         }
+    }
+
+    override fun onDestroyView() {
+        binding.recyclerFav.adapter = null
+        _binding = null
+        super.onDestroyView()
     }
 }

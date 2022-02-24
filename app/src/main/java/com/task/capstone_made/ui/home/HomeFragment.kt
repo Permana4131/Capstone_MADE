@@ -80,12 +80,6 @@ class HomeFragment : Fragment() {
             })
         }
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
     private fun onSuccessState(
         homeFragmentBinding: HomeFragmentBinding?
     ) {
@@ -131,4 +125,9 @@ class HomeFragment : Fragment() {
         (('a'..'z') + ('A'..'Z')).random()
     }.joinToString("")
 
+    override fun onDestroyView() {
+        binding.recyclerHome.adapter = null
+        _binding = null
+        super.onDestroyView()
+    }
 }
